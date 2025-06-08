@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRO: Simulatore Avanzato di Batterie</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <div id="main-container">
+
+        <aside id="toolbar">
+            <h2>Componenti</h2>
+            <div class="component-list">
+                <div class="tool-item" data-type="BATTERY_LIFEPO4">Batteria LiFePO4</div>
+                <div class="tool-item" data-type="BATTERY_AGM">Batteria AGM 12V</div>
+                <div class="tool-item" data-type="BMS_4S">BMS 4S 12V</div>
+                <div class="tool-item" data-type="FUSE">Fusibile</div>
+                <div class="tool-item" data-type="INVERTER">Inverter DC/AC</div>
+                <div class="tool-item" data-type="SOLAR_PANEL">Pannello Solare</div>
+                <div class="tool-item" data-type="CHARGE_CONTROLLER_MPPT">Regolatore MPPT</div>
+                <div class="tool-item" data-type="LOAD_MOTOR">Carico: Motore</div>
+                <div class="tool-item" data-type="LOAD_BULB">Carico: Lampadina</div>
+            </div>
+             <h2>Strumenti</h2>
+            <div class="tool-item" data-type="MULTIMETER">Tester</div>
+        </aside>
+
+        <main id="workspace-wrapper">
+            <svg id="workspace-svg"></svg>
+            <div id="workspace-html"></div>
+        </main>
+
+        <aside id="inspector">
+            <h2>Dettagli e Impostazioni</h2>
+            <div id="inspector-content">
+                <p class="placeholder">Seleziona un componente per ispezionarlo e modificarne i parametri.</p>
+            </div>
+            <div id="simulation-controls">
+                 <button id="start-sim-btn">Avvia Simulazione</button>
+                 <button id="stop-sim-btn">Ferma Simulazione</button>
+            </div>
+            <div id="multimeter-display-container" class="hidden">
+                <h3>Multimetro</h3>
+                <div id="multimeter-screen">0.00 V</div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Librerie -->
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <!-- Moduli JavaScript del Simulatore -->
+    <script type="module" src="js/app.js"></script>
+
+</body>
+</html>
