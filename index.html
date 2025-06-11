@@ -8,48 +8,39 @@
 </head>
 <body>
 
-    <!-- Contenitore Principale Flexbox -->
     <div id="main-container">
 
-        <!-- Barra degli Strumenti a Sinistra -->
         <aside id="toolbar">
             <h2>Componenti</h2>
             <div class="component-list">
-                <div class="tool-item" data-type="BATTERY_LIFEPO4" title="Aggiungi una Batteria Litio-Ferro-Fosfato">Batteria LiFePO4</div>
-                <div class="tool-item" data-type="BATTERY_AGM" title="Aggiungi una Batteria AGM 12V">Batteria AGM 12V</div>
-                <div class="tool-item" data-type="BMS_4S" title="Aggiungi un Battery Management System 4S">BMS 4S 12V</div>
-                <div class="tool-item" data-type="FUSE" title="Aggiungi un Fusibile">Fusibile</div>
-                <div class="tool-item" data-type="INVERTER" title="Aggiungi un Inverter DC/AC">Inverter DC/AC</div>
-                <div class="tool-item" data-type="SOLAR_PANEL" title="Aggiungi un Pannello Solare">Pannello Solare</div>
-                <div class="tool-item" data-type="CHARGE_CONTROLLER_MPPT" title="Aggiungi un Regolatore di Carica MPPT">Regolatore MPPT</div>
-                <div class="tool-item" data-type="LOAD_MOTOR" title="Aggiungi un Motore DC come carico">Carico: Motore</div>
-                <div class="tool-item" data-type="LOAD_BULB" title="Aggiungi una Lampadina DC come carico">Carico: Lampadina</div>
+                <div class="tool-item" data-type="BATTERY_LIFEPO4">Batteria LiFePO4</div>
+                <div class="tool-item" data-type="BATTERY_AGM">Batteria AGM 12V</div>
+                <div class="tool-item" data-type="BMS_4S">BMS 4S 12V</div>
+                <div class="tool-item" data-type="FUSE">Fusibile</div>
+                <div class="tool-item" data-type="INVERTER">Inverter DC/AC</div>
+                <div class="tool-item" data-type="SOLAR_PANEL">Pannello Solare</div>
+                <div class="tool-item" data-type="CHARGE_CONTROLLER_MPPT">Regolatore MPPT</div>
+                <div class="tool-item" data-type="LOAD_MOTOR">Carico: Motore</div>
+                <div class="tool-item" data-type="LOAD_BULB">Carico: Lampadina</div>
             </div>
-            <h2>Strumenti</h2>
-            <div class="tool-item" data-type="MULTIMETER" title="Aggiungi un Multimetro/Tester">Tester</div>
+             <h2>Strumenti</h2>
+            <div class="tool-item" data-type="MULTIMETER">Tester</div>
         </aside>
 
-        <!-- Area di Lavoro Centrale -->
         <main id="workspace-wrapper">
-            <!-- SVG per disegnare elementi come i cavi -->
             <svg id="workspace-svg"></svg>
-            <!-- Contenitore HTML per posizionare i componenti -->
             <div id="workspace-html"></div>
         </main>
 
-        <!-- Pannello di Ispezione e Controllo a Destra -->
         <aside id="inspector">
             <h2>Dettagli e Impostazioni</h2>
             <div id="inspector-content">
-                <!-- --- MIGLIORATO --- Testo più esplicativo -->
-                <p class="placeholder">Seleziona un componente per ispezionarne i parametri o premi 'Canc' per eliminarlo.</p>
+                <p class="placeholder">Seleziona un componente per ispezionarlo e modificarne i parametri.</p>
             </div>
-            <!-- Controlli Simulazione -->
             <div id="simulation-controls">
                  <button id="start-sim-btn">Avvia Simulazione</button>
                  <button id="stop-sim-btn">Ferma Simulazione</button>
             </div>
-            <!-- Display Multimetro (nascosto di default) -->
             <div id="multimeter-display-container" class="hidden">
                 <h3>Multimetro</h3>
                 <div id="multimeter-screen">0.00 V</div>
@@ -58,9 +49,8 @@
 
     </div>
 
-    <!-- Librerie Esterne -->
+    <!-- Librerie -->
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
-    
     <!-- Moduli JavaScript del Simulatore -->
     <script type="module" src="js/app.js"></script>
 
